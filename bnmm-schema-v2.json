@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "BNMM - Información pública",
+        "version": "1.0.1",
+        "description": "Esquema de API simplificado para el asistente Georgie de la Biblioteca Nacional Argentina Mariano Moreno."
+    },
+    "paths": {
+        "/servicios": {
+            "get": {
+                "summary": "Horarios y servicios",
+                "description": "Devuelve los horarios de atención y servicios al público.",
+                "responses": {
+                    "200": {
+                        "description": "Enlace a horarios",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "url": "https://www.bn.gov.ar/servicios/horarios"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/catalogo": {
+            "get": {
+                "summary": "Catálogo en línea",
+                "description": "Devuelve el enlace al catálogo OPAC de la Biblioteca Nacional.",
+                "responses": {
+                    "200": {
+                        "description": "Enlace al catálogo",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "url": "https://catalogo.bn.gov.ar"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/contacto": {
+            "get": {
+                "summary": "Contacto institucional",
+                "description": "Devuelve el correo de contacto institucional.",
+                "responses": {
+                    "200": {
+                        "description": "Correo de contacto",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "email": "contactoweb@bn.gob.ar"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/actividades": {
+            "get": {
+                "summary": "Actividades culturales y exposiciones",
+                "description": "Devuelve el enlace a la sección de actividades culturales y exposiciones vigentes de la Biblioteca Nacional.",
+                "responses": {
+                    "200": {
+                        "description": "Enlace a actividades culturales",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "url": "https://www.bn.gov.ar/agenda"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
